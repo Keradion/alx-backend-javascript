@@ -1,6 +1,3 @@
-Here's a beautified version of the `README.md` using icons, emojis, and colors to make it more visually appealing:
-
----
 
 # 🌟 **0x00. ES6 Basics** 🌟
 
@@ -102,6 +99,3 @@ This project was developed as part of the **ALX SE Backend Curriculum**.
 ## 📝 **License**
 This project is licensed under the **MIT License**.
 
----
-
-With this design, the use of emojis, badges, and icons makes it visually engaging while also organizing information in a clear, structured way.
