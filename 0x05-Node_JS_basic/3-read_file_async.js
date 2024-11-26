@@ -18,12 +18,14 @@ const countStudents = (file) => {
         // Process each line
         read.on('line', (line) => {
             const studentName = line.split(',')[0];
-            if (line.includes('CS')) {
-                cs.push(studentName);
-            } else if (line.includes('SWE')) {
-                swe.push(studentName);
-            }
-        });
+            if (line) {
+		    if (line.includes('CS')) {
+			    cs.push(studentName);
+		    } else if (line.includes('SWE')) {
+			    swe.push(studentName);
+		    }
+	    }
+	    });
 
         // Finalize when reading is complete
         read.on('close', () => {
