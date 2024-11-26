@@ -9,9 +9,10 @@ const countStudents = (file) => {
         const readstream = fs.createReadStream(file);
 
         // Handle errors in file reading
-        readstream.on('error', (err) => reject('Cannot '));
-
-        const read = readline.createInterface({
+	 readstream.on('error', () => {
+      reject(new Error('Cannot load the database'));
+    });
+	    const read = readline.createInterface({
             input: readstream,
         });
 
