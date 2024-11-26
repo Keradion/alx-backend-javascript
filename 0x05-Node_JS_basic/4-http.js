@@ -8,6 +8,5 @@ const requestListener = (req, res) => {
 const app = http.createServer(requestListener);
 
 const port = 1245;
-const host = 'localhost';
 
-app.listen(port, host);
+app.listen(port);
