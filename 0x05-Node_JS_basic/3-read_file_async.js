@@ -9,7 +9,7 @@ const countStudents = (file) => {
         const readstream = fs.createReadStream(file);
 
         // Handle errors in file reading
-        readstream.on('error', (err) => reject(`Cannot load the database: ${err.message}`));
+        readstream.on('error', (err) => reject(`Cannot load the database`));
 
         const read = readline.createInterface({
             input: readstream,
@@ -45,4 +45,3 @@ const displayStudents = (students) => {
 };
 
 module.exports = countStudents;
-
