@@ -16,9 +16,9 @@ const countStudents = (file) => {
 			}
 
 		});
-		process.stdout.write(`Number of students: ${cs.length + swe.length}\n`)
-		process.stdout.write(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}\n`)
-		process.stdout.write(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}\n`)
+		console.log(`Number of students: ${cs.length + swe.length}`)
+		console.log(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}`)
+		console.log(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`)
 	}
 	catch(err) {
 		throw new Error('Cannot load the database');
@@ -26,3 +26,4 @@ const countStudents = (file) => {
 };
 
 module.exports = countStudents;
+
