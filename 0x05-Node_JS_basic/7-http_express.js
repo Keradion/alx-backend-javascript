@@ -1,6 +1,7 @@
 // Simple Http Server 
 const Express = require('express')
 const app = Express()
+const file = process.argv[2];
 
 app.get('/', (req, res) => {
 	res.status(200)
@@ -8,12 +9,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/students', (req, res) => {
-	countStudents("database.csv")
+	countStudents(file)
     .then(() => {
 	    res.status(200)
 	    res.send(result)
     })
         .catch((error) => {
+	res.status(404)
         console.log(error);
     });
 })
