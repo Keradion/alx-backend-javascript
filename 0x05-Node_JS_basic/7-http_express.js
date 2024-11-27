@@ -60,3 +60,5 @@ const countStudents = (file) => {
     });
 };
 
+module.exports = app;
+
