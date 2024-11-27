@@ -15,8 +15,8 @@ app.get('/students', (req, res) => {
 	    res.send(result)
     })
         .catch((error) => {
-	res.status(404)
-        console.log(error);
+		res.status(500)
+		res.send('Cannot load the database')
     });
 })
 
