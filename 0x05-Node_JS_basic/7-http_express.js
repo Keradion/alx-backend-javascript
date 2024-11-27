@@ -54,7 +54,7 @@ const countStudents = (file) => {
 
         // Finalize when reading is complete
         read.on('close', () => {
-            result = (`Number of students: ${cs.length + swe.length}\nNumber of students in CS: ${cs.length}. List: ${cs.join(', ')}\nNumber of students in SWE: ${swe.length}. List: ${swe.join(', ')}\n`)  
+            result = (`This is the list of our students\nNumber of students: ${cs.length + swe.length}\nNumber of students in CS: ${cs.length}. List: ${cs.join(', ')}\nNumber of students in SWE: ${swe.length}. List: ${swe.join(', ')}\n`)  
 		resolve(result); // Resolve the promise when everything is done
         });
     });
