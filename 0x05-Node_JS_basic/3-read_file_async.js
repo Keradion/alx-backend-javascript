@@ -31,18 +31,12 @@ const countStudents = (file) => {
         // Finalize when reading is complete
         read.on('close', () => {
             console.log(`Number of students: ${cs.length + swe.length}`);
-            process.stdout.write(`Number of students in CS: ${cs.length}. List: `);
-            displayStudents(cs);
-            process.stdout.write(`Number of students in SWE: ${swe.length}. List: `);
-            displayStudents(swe);
+            console.log(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}`);
+            console.log(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`);
             resolve(); // Resolve the promise when everything is done
         });
     });
 };
-
-// Helper function to display students
-const displayStudents = (students) => {
-    console.log(students.join(', '));
-};
-
 module.exports = countStudents;
+
+
