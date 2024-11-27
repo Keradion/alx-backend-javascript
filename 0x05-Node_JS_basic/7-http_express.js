@@ -3,13 +3,15 @@ const Express = require('express')
 const app = Express()
 
 app.get('/', (req, res) => {
+	res.status(200)
 	res.send('Hello Holberton School!\n')
 })
 
 app.get('/students', (req, res) => {
 	countStudents("database.csv")
     .then(() => {
-        res.send(result);
+	    res.status(200)
+	    res.send(result)
     })
         .catch((error) => {
         console.log(error);
