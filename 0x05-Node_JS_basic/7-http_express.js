@@ -5,7 +5,7 @@ const file = process.argv[2];
 
 app.get('/', (req, res) => {
 	res.status(200)
-	res.send('Hello Holberton School!\n')
+	res.send('Hello Holberton School!')
 })
 
 app.get('/students', (req, res) => {
