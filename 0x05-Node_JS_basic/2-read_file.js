@@ -16,13 +16,9 @@ const countStudents = (file) => {
 			}
 
 		});
-		console.log(`Number of students: ${cs.length + swe.length}`)
-		process.stdout.write(`Number of students in CS: ${cs.length}. List: `)
-		process.stdout.write(cs.join(', '))
-		console.log()
-		process.stdout.write(`Number of students in SWE: ${swe.length}. List: `)
-		process.stdout.write(swe.join(', '))
-		console.log()
+		process.stdout.write(`Number of students: ${cs.length + swe.length}\n`)
+		process.stdout.write(`Number of students in CS: ${cs.length}. List: ${cs.join(', ')}\n`)
+		process.stdout.write(`Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}\n`)
 	}
 	catch(err) {
 		throw new Error('Cannot load the database');
