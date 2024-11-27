@@ -4,7 +4,7 @@ const app = Express()
 
 app.get('/', (req, res) => {
 	res.status(200)
-	res.send('Hello Holberton School!\n')
+	res.send('Hello Holberton School!')
 })
 
 
