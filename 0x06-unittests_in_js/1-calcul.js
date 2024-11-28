@@ -6,7 +6,7 @@ const calculateNumber = (type, a, b) => {
 		return a + b;
 	
 	if (type == 'SUBTRACT') 
-		return a - b;
+		return b - a;
 	
 	if (type == 'DIVIDE') {
 		if (b == 0) 
