@@ -14,7 +14,8 @@ describe('Test Add Functionality', () => {
 	});
 
 	it('Test sum of 2 digits', () => {
-		reult = func('SUM', 2.4, 5); // expected result 7
+		result = func('SUM', 2.4, 5);
+		assert.equal(result, 7) // expected result 7
 	});
 });
 
