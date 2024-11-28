@@ -32,6 +32,10 @@ describe('Test Subtract functionality', () => {
                 assert.equal(result, 3)
         });
 
+	it('Test difference of 2 digits', () => {
+                result = func('SUBTRACT', 1.6, 3.6) // expected result 2
+                assert.equal(result, 2)
+        });
 });
 
 // Test For 'DIVIDE'
@@ -45,6 +49,11 @@ describe('Test DIVIDE functionality', () => {
         it('Test division of 2 digits', () => {
                 result = func('DIVIDE', 1, 0) // expected result 'Error'
                 assert.equal(result, 'Error')
+        });
+	
+	it('Test division of 2 digits', () => {
+                result = func('DIVIDE', 4, 2) // expected result 2
+                assert.equal(result, 2)
         });
 
 });
