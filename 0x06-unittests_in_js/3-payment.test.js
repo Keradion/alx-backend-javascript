@@ -11,6 +11,6 @@ describe('Test a function arguments', () => {
 		argument1 = 100;
 		argument2 = 20
 		sendPaymentRequestApi(argument1, argument2); // this invokes calculateNumber
-		spy.calledOnceWith(argument1, argument2); // Test calculateNumber called with arg1 and arg2 from sendpaymentRequestApi.
+		spy.calledWith('SUM', argument1, argument2); // Test calculateNumber called with arg1 and arg2 from sendpaymentRequestApi.
 	});
 });
