@@ -15,5 +15,4 @@ const calculateNumber = (type, a, b) => {
 	}
 };
 
-console.log(calculateNumber('DIVIDE', 5, 0));
 module.exports = calculateNumber;
