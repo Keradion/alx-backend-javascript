@@ -9,10 +9,8 @@ class StudentsController {
 				const cs = studentDict['CS'];
 				const swe = studentDict['SWE'];
 				const result = `This is the list of our students 
-Number of students: ${cs.length + swe.length}
 Number of students in CS: ${cs.length}. List: ${cs.join(', ')}
-Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}
-`;
+Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`;
 				response.status(200).send(result);
 			})
 		.catch((error) => {
@@ -27,12 +25,13 @@ Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}
 				const requestedMajor = request.params.major // Read major parameter value
                                 if (requestedMajor == 'CS') {
 					major = studentDict['CS'];
-				} else {
+				} else if (requestedMajor == 'SWE')  {
 					major = studentDict['SWE'];
+				} else {
+					response.status(500).send('Major parameter must be CS or SWE');
 				}
 
-                                const result = `List: ${major.join(', ')}
-`;
+                                const result = `List: ${major.join(', ')}`;
                                 response.status(200).send(result);
                         })
                 .catch((error) => {
