@@ -6,3 +6,5 @@ const routes = require('./routes/index.js')
 app.use(routes) // routes associated with server instance 
 
 app.listen(port); // start the server
+
+module.exports = app;
