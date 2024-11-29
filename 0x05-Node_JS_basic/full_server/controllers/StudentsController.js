@@ -1,9 +1,10 @@
 // Class with two static methods
 const readDatabase = require('../utils.js')
+const dbFile = process.argv[2] // Read the database file name 
 
 class StudentsController {
 	static getAllStudents(request, response) {
-		readDatabase('students.csv')
+		readDatabase(dbFile)
 			.then((studentDict) => {
 				const cs = studentDict['CS'];
 				const swe = studentDict['SWE'];
@@ -20,7 +21,7 @@ Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}
 	}
 
 	static getAllStudentsByMajor(request, response) {
-		  readDatabase('students.csv')
+		  readDatabase(dbFile)
                         .then((studentDict) => {
 				let major = []
 				const requestedMajor = request.params.major // Read major parameter value
