@@ -9,9 +9,7 @@ class StudentsController {
 			.then((studentDict) => {
 				const cs = studentDict['CS'];
 				const swe = studentDict['SWE'];
-				const result = `This is the list of our students
-Number of students in CS: ${cs.length}. List: ${cs.join(', ')}
-Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`.trim();
+				const result = `This is the list of our students\nNumber of students in CS: ${cs.length}. List: ${cs.join(', ')}\nNumber of students in SWE: ${swe.length}. List: ${swe.join(', ')}`.trim();
 
 				response.status(200).send(result);
 			})
