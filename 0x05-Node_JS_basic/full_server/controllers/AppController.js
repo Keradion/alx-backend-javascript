@@ -8,5 +8,3 @@ class AppController {
 }
 
 export default AppController;
-
-module.exports = AppController; // Can be imported

@@ -1,7 +1,7 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router(); // Links routes with controllers
-const AppController = require('../controllers/AppController');
-const StudentsController = require('../controllers/StudentsController');
+import AppController from '../controllers/AppController';
+import StudentsController from '../controllers/StudentsController';
 
 
 // Link '/' route with getHomePage Controller
@@ -17,4 +17,3 @@ router.get('/students', StudentsController.getAllStudents);
 router.get('/students/:major', StudentsController.getAllStudentsByMajor);
 
 export default router;
-module.exports = router; 

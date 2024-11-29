@@ -1,5 +1,5 @@
-const fs = require('fs');
-const readline = require('readline');
+import fs from 'fs';
+import readline from 'readline';
 
 const readDatabase = (file) => {
     return new Promise((resolve, reject) => {
@@ -34,4 +34,3 @@ const readDatabase = (file) => {
 };
 
 export default readDatabase;
-module.exports = readDatabase;

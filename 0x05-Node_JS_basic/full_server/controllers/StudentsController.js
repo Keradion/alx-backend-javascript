@@ -1,5 +1,6 @@
 // Class with two static methods
-const readDatabase = require('../utils.js')
+import readDatabase from '../utils.js'
+
 const dbFile = process.argv[2] // Read the database file name 
 
 class StudentsController {
@@ -43,4 +44,3 @@ Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`;
 
 
 export default StudentsController;
-module.exports = StudentsController;

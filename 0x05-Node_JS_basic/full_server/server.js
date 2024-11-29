@@ -1,11 +1,10 @@
-const express = require('express')
+import express from 'express';
 const app = express() // Express Instance 
 const port = 1245;
-const routes = require('./routes/index.js')
+import routes from './routes/index.js'
 
 app.use(routes) // routes associated with server instance 
 
 app.listen(port); // start the server
 
 export default app;
-module.exports = app;
