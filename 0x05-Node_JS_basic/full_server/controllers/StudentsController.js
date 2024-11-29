@@ -15,7 +15,7 @@ Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`;
 				response.status(200).send(result);
 			})
 		.catch((error) => {
-			response.status(500).send(error); // Server Side Issue
+			response.status(500).send('Cannot load the database'); // Server Side Issue
 		});
 	}
 
@@ -36,7 +36,7 @@ Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`;
                                 response.status(200).send(result);
                         })
                 .catch((error) => {
-                        response.status(500).send(error); // Server Side Issue
+                        response.status(500).send('Cannot load the database'); // Server Side Issue
                 });
         }
 
