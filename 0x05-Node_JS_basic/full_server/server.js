@@ -7,4 +7,5 @@ app.use(routes) // routes associated with server instance
 
 app.listen(port); // start the server
 
+export default app;
 module.exports = app;

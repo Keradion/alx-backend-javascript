@@ -42,5 +42,5 @@ Number of students in SWE: ${swe.length}. List: ${swe.join(', ')}`;
 }
 
 
-
+export default StudentsController;
 module.exports = StudentsController;

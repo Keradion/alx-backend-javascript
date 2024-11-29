@@ -32,4 +32,6 @@ const readDatabase = (file) => {
         });
     });
 };
+
+export default readDatabase;
 module.exports = readDatabase;
