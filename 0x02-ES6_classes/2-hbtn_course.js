@@ -30,7 +30,7 @@ export default class ALXCourse {
   }
 
   set length(length) {
-    if (typeof length !== 'number'){
+    if (typeof length !== 'number') {
       throw Error('TypeError: Length must be a Number');
     }
     this._length = length;
@@ -42,8 +42,8 @@ export default class ALXCourse {
 
   set students(students) {
     if (!(Array.isArray(students))) {
-      throw Error('TypeError: Students must be an array of strings')
+      throw Error('TypeError: Students must be an array of strings');
     }
     this._students = students;
   }
-};
+}
