@@ -3,15 +3,12 @@ export default class ALXCourse {
     if (typeof name !== 'string') {
       throw Error('TypeError: Name must be a string');
     }
-    
-    if (typeof length !== 'number'){
+    if (typeof length !== 'number') {
       throw Error('TypeError: Length must be a number');
     }
-
-    if (!(Array.isArray(students))){
+    if (!(Array.isArray(students))) {
       throw Error('TypeError: Students must be array of strings');
     }
-
     this._name = name;
     this._length = length;
     this._students = students;
@@ -22,7 +19,7 @@ export default class ALXCourse {
   }
 
   set name(name) {
-    if (typeof name !== 'string'){
+    if (typeof name !== 'string') {
       throw Error('TypeError: Name must be a string');
     }
     this._name = name;
@@ -43,10 +40,10 @@ export default class ALXCourse {
     return this._students;
   }
 
-  set students (students) {
-    if (!(Array.isArray(students))){
+  set students(students) {
+    if (!(Array.isArray(students))) {
       throw Error('TypeError: Students must be an array of strings')
     }
     this._students = students;
   }
-}
+};
