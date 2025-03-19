@@ -26,15 +26,17 @@ export default class Pricing {
   get currency() {
     return this._currency;
   }
+
   set currency(currency) {
     if (!(currency instanceof Currency)) {
       throw Error('TypeError: Currency must be Currency');
     }
+    this._currency = currency;
   }
 
   displayFullPrice() {
     return `${this._amount} ${this._currency._name} (${this._currency._code})`;
-  }
+  };
 
   static convertPrice(amount, conversionRate) {
     return (amount * conversionRate)
