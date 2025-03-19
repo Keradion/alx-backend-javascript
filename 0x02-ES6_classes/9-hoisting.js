@@ -4,7 +4,6 @@ export class ALXClass {
     this._location = location;
   }
 
-
   get year() {
     return this._year;
   }
@@ -16,8 +15,6 @@ export class ALXClass {
 
 const class2019 = new ALXClass(2019, 'San Francisco');
 const class2020 = new ALXClass(2020, 'San Francisco');
-
-
 
 export class StudentALX {
   constructor(firstName, lastName, alxClass) {
