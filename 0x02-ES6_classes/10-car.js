@@ -4,6 +4,7 @@ class Car {
     this._motor = motor;
     this._color = color;
   }
+
   cloneCar () {
     return new this.constructor[Symbol.species](this._brand, this._motor, this._color);
   }
