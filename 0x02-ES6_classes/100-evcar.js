@@ -1,10 +1,11 @@
-import Car from './10-car.js';
+import Car from './10-car';
 
-class EvCar extends Car{
+class EvCar extends Car {
   constructor(brand, motor, color, range) {
-    super(brand, motor, color)
+    super(brand, motor, color);
     this._range = range;
   }
+
   static get [Symbol.species]() {
     return Car;
   }
