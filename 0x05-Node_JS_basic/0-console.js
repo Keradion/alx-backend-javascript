@@ -1,5 +1,5 @@
-const displayMessage = (string) => {
-	console.log(`${string}`)
+const displayMessage = (message) => {
+  console.log(message);
 };
-// displayMessage can be import from other files
+
 module.exports = displayMessage;
