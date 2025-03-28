@@ -11,7 +11,6 @@ const processFile = (file) => {
   const swe = [];
   const cs = [];
   for (const line of file.slice(1)) {
-    // split the line using ',' and fetch the first name of the student 
     const row = line.split(',');
     const name = row[0];
     const department = row[row.length - 1].trim();
