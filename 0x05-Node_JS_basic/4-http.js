@@ -7,7 +7,7 @@ const requestListener = (req, res) => {
 
 const server = app.createServer(requestListener);
 
-server.listen(1245, 'localhost', () => {
+server.listen(1245, () => {
   console.log('Server is Active.');
 });
 
