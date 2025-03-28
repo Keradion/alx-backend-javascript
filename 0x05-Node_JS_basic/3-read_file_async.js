@@ -4,7 +4,7 @@ const processFile = (file) => {
   const cs = [];
   const swe = [];
   for (const line of file.slice(1)) {
-    const row = line.split(',')
+    const row = line.split(',');
     const name = row[0];
     const filed = row[row.length - 1].trim();
 
