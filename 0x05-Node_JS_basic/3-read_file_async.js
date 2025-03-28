@@ -1,4 +1,5 @@
-const fs = require('fs/promises');
+const fs = require('node:fs/promises');
+
 const processFile = (file) => {
   const cs = [];
   const swe = [];
@@ -17,14 +18,14 @@ const processFile = (file) => {
 };
 
 const countStudents = async (filePath) => {
-   try{
+  try {
     const file = await fs.readFile(filePath, 'utf-8');
     const students = processFile(file.split('\n'));
-    console.log(`Number of students: ${students[0].length + students[1].length}`)
+    console.log(`Number of students: ${students[0].length + students[1].length}`);
     console.log(`Number of students in CS: ${students[0].length}. List: ${students[0].join(', ')}`);
     console.log(`Number of students in SWE: ${students[1].length}. List: ${students[1].join(', ')}`);
   } catch (error) {
-    throw new Error('Cannot load the database')
+    throw Error('Cannot load the database');
   }
 };
 module.exports = countStudents;
