@@ -1,4 +1,4 @@
-const fs = require('node:fs');
+const fs = require('fs');
 
 const countStudents = (filePath) => {
   try
@@ -6,7 +6,7 @@ const countStudents = (filePath) => {
     const file = fs.readFileSync(filePath, 'utf-8'); 
     processFile((file).split('\n')); 
   } 
-  catch (error)
+  catch (Error)
   {
     throw new Error('Cannot load the database')
   }
