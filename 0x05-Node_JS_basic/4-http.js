@@ -1,14 +1,13 @@
-const app = require('http');
+const http = require('http');
 
 const requestListener = (req, res) => {
   res.writeHead(200);
   res.end('Hello ALX!');
 };
 
-const server = app.createServer(requestListener);
+const app = http.createServer(requestListener);
 
-server.listen(1245, () => {
-  console.log('Server is Active.');
+app.listen(1245, () => {
 });
 
-module.exports = server;
+module.exports = app;
