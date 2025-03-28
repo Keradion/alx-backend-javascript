@@ -5,7 +5,7 @@ const rline = readline.createInterface({
   output: process.stdout,
 });
 
-rline.question('Welcome to ALX, what is your name?\n', (name) => {
+rline.question('Welcome to Holberton School, what is your name?\n', (name) => {
   console.log(`Your name is: ${name}`)
   // Message displays when the user try to close or end the program - close event.
   rline.on('close', () => {
