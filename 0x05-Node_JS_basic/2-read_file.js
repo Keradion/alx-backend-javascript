@@ -27,7 +27,7 @@ const countStudents = (filePath) => {
   try {
     const file = fs.readFileSync(filePath, 'utf-8');
     processFile((file).split('\n'));
-  } catch (Error) {
+  } catch {
     throw Error('Cannot load the database');
   }
 };
