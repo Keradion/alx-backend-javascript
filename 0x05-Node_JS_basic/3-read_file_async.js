@@ -23,7 +23,7 @@ const countStudents = async (filePath) => {
     console.log(`Number of students: ${students[0].length + students[1].length}`)
     console.log(`Number of students in CS: ${students[0].length}. List: ${students[0].join(', ')}`);
     console.log(`Number of students in SWE: ${students[1].length}. List: ${students[1].join(', ')}`);
-  } catch {
+  } catch (error) {
     throw new Error('Cannot load the database')
   }
 };
