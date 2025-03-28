@@ -2,7 +2,7 @@ const http = require('http');
 
 const requestListener = (req, res) => {
   res.writeHead(200);
-  res.end('Hello ALX!');
+  res.end('Hello Holberton School!');
 };
 
 const app = http.createServer(requestListener);
