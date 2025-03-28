@@ -11,4 +11,4 @@ server.listen(1245, () => {
   console.log('Server is Active.');
 });
 
-module.exports = app;
+module.exports = server;
