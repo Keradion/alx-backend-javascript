@@ -21,13 +21,17 @@ const processFile = (file) => {
   return [cs, swe];
 };
 
+const errorHandler = (req, res) => {
+  res.end('Cannot load the database')
+}
+
 const countStudents = async (filePath) => {
   try {
     const file = await fs.readFile(filePath, 'utf-8');
     const students = processFile(file.split('\n'));
     return `This is the list of our students\nNumber of students: ${students[0].length + students[1].length}\nNumber of students in CS: ${students[0].length}. List: ${students[0].join(', ')}\nNumber of students in SWE: ${students[1].length}. List: ${students[1].join(', ')}`;
   } catch (error) {
-    throw Error('Cannot load the database')
+    throw new Error('Cannot load the database file.')
   }
 };
 
@@ -40,7 +44,7 @@ const requestListener = (req, res) => {
       res.writeHead(200);
       res.end(response);
     }).catch((error) => {
-      const response = `This is the list of our students\n${error}`;
+      const response = `This is the list of our students\nCannot load the database`;
       res.writeHead(200);
       res.end(response);
     });
