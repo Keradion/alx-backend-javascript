@@ -27,7 +27,7 @@ const countStudents = async (filePath) => {
     const students = processFile(file.split('\n'));
     return `This is the list of our students\nNumber of students: ${students[0].length + students[1].length}\nNumber of students in CS: ${students[0].length}. List: ${students[0].join(', ')}\nNumber of students in SWE: ${students[1].length}. List: ${students[1].join(', ')}`;
   } catch (error) {
-    throw Error('Cannot load the database');
+    throw Error('Cannot load the database')
   }
 };
 
@@ -39,11 +39,11 @@ const requestListener = (req, res) => {
     countStudents(filePath).then((response) => {
       res.writeHead(200);
       res.end(response);
-    }).catch ((error) => {
-    const response = `This is the list of our students\n${error}`;
-    res.writeHead(200);
-    res.end(response);
-    })
+    }).catch((error) => {
+      const response = `This is the list of our students\n${error}`;
+      res.writeHead(200);
+      res.end(response);
+    });
   }
 };
 
