@@ -1,4 +1,5 @@
 import fs from 'fs';
+
 const fsPromises = fs.promises;
 
 const processFile = (file) => {
@@ -21,12 +22,12 @@ const processFile = (file) => {
 const readDatabase = async (filePath) => {
   try {
     const file = await fsPromises.readFile(filePath, 'utf-8');
-    const lines = file.split('\n')
-    const students = processFile(lines); // Process the file and return an object of arrays of the firstname of students per filed.
+    const lines = file.split('\n');
+    const students = processFile(lines); 
     const result = {
-      'CS': students[0],
-      'SWE': students[1],
-    }
+      CS: students[0],
+      SWE: students[1],
+    };
     return result;
   } catch (error) {
     throw new Error('Cannot read the file');
