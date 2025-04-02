@@ -8,15 +8,14 @@ class StudentsController {
     try {
       const data = await readDatabase(filePath); // calling readDatabse
       const fileds = Object.keys(data);
-      let result = '';
+      let result = 'This is the list of our students<br>';
       for (const filed of fileds) {
-        result = `Number of students in ${filed}:  ${data[filed].length}. List: ${data[filed].join(',  ')}<br>`;
+        let students = data[filed].join(', ')
+        result = result + `Number of students in ${filed}:  ${data[filed].length}. List: ${students}<br>`;
       }
-      response.status(200);
-      response.send(result);
+      return response.status(200).send(result);
     } catch (error) {
-      response.status(500);
-      response.send('Cannot load the database');
+      return response.status(500).send('Cannot load the database');
     }
   }
 
@@ -26,9 +25,9 @@ class StudentsController {
     try {
       const data = await readDatabase(filePath);
       if (major === ':CS') {
-        result = `Number of students in CS:  ${data.CS.length}. List: ${data.CS.join(',  ')}`;
+        result = `List: ${data.CS.join(',  ')}`;
       } else if (major === ':SWE') {
-        result = `Number of students in SWE:  ${data.SWE.length}. List: ${data.SWE.join(',')}`;
+        result = `List: ${data.SWE.join(', ')}`;
       } else {
         return response.status(500).send('Major parameter must be CS or SWE');
       }
