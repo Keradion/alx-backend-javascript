@@ -31,7 +31,7 @@ class StudentsController {
         result = `Number of students in SWE:  ${data.SWE.length}. List: ${data.SWE.join(',')}`;
       } else {
         response.status(500);
-        response.send(`Major parameter must be CS or SWE`);
+        response.send('Major parameter must be CS or SWE');
       }
       response.status(200);
       response.send(result);
