@@ -1,4 +1,4 @@
-import readDatabase from '../utils.js'
+import readDatabase from '../utils';
 
 const filePath = process.argv[2];
 
@@ -21,26 +21,25 @@ class StudentsController {
   }
 
   static async getAllStudentsByMajor(request, response) {
-    const major = request.params.major.toUpperCase(); 
+    const major = request.params.major.toUpperCase();
     let result = '';
     try {
-      const data = await readDatabase(filePath); 
+      const data = await readDatabase(filePath);
       if (major === ':CS') {
         result = `Number of students in CS:  ${data.CS.length}. List: ${data.CS.join(',  ')}`;
-
       } else if (major === ':SWE') {
         result = `Number of students in SWE:  ${data.SWE.length}. List: ${data.SWE.join(',')}`;
       } else {
         response.status(500);
-        response.send('Major Parameter must be CS or SWE')
-    }
-       response.status(200);
-       response.send(result);
+        response.send('Major Parameter must be CS or SWE');
+      }
+        response.status(200);
+        response.send(result);
   } catch (error) {
-       response.status(500);
-       response.send(error);
+        response.status(500);
+        response.send(error);
   }
-  }
+ }
 }
 
 export default StudentsController;
