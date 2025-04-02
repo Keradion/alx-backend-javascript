@@ -1,4 +1,5 @@
-import fs from 'fs/promises';
+import fs from 'fs';
+const fsPromises = fs.promises;
 
 const processFile = (file) => {
   const swe = [];
@@ -19,7 +20,7 @@ const processFile = (file) => {
 
 const readDatabase = async (filePath) => {
   try {
-    const file = await fs.readFile(filePath, 'utf-8');
+    const file = await fsPromises.readFile(filePath, 'utf-8');
     const lines = file.split('\n')
     const students = processFile(lines); // Process the file and return an object of arrays of the firstname of students per filed.
     const result = {
