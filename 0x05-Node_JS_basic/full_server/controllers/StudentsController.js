@@ -31,7 +31,8 @@ class StudentsController {
     } else if (major === ':SWE') {
       result = `Number of students in SWE:  ${data['SWE'].length}. List: ${data['SWE'].join(',')}`;
     } else {
-      result = 'Mojor not available'
+      response.status(500);
+      response.send('Major Parameter must be CS or SWE')
     }
 
     response.status(200);
