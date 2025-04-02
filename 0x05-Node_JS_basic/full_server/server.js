@@ -1,4 +1,4 @@
-import router from './index.js';
+import router from './routes/index.js';
 import express from 'express';
 const app = express();
 const PORT = 1245;
