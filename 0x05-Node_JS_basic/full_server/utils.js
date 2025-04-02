@@ -23,7 +23,7 @@ const readDatabase = async (filePath) => {
   try {
     const file = await fsPromises.readFile(filePath, 'utf-8');
     const lines = file.split('\n');
-    const students = processFile(lines); 
+    const students = processFile(lines);
     const result = {
       CS: students[0],
       SWE: students[1],
