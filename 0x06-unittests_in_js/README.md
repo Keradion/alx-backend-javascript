@@ -1,5 +1,3 @@
----
-
 # 0x06. Unittests in JS
 
 **Back-end JavaScript | Node.js | ES6 | Mocha | Chai | Sinon**
