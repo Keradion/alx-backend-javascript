@@ -1,5 +1,3 @@
-Absolutely! Here’s a **professional README.md** for your project, **“0x06. Unittests in JS”**, based on the project scope and instructions you provided.
-
 ---
 
 # 0x06. Unittests in JS
